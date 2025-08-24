@@ -51,7 +51,6 @@ class MainActivity : ComponentActivity() {
                             onSaveFavorite = { city -> favoriteCity = city },
                             onSearch = { city ->
                                 if (city.isNotBlank()) {
-                                    // Navigate to details screen with city name
                                     navController.navigate("details/${city}")
                                 }
                             }
