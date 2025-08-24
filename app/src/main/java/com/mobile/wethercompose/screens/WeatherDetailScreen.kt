@@ -26,7 +26,7 @@ fun WeatherDetailScreen(city: String, description: String, temperature: Double) 
                 Text(text = "$description", style = MaterialTheme.typography.titleMedium)
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    text = "${temperature}°C",
+                    text = "${response.main?.temp}°C",
                     fontSize = 36.sp,
                     color = MaterialTheme.colorScheme.primary
                 )

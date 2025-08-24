@@ -1,6 +1,7 @@
 package com.mobile.wethercompose.screens
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -21,6 +22,7 @@ import androidx.compose.ui.unit.sp
 import com.mobile.wethercompose.R
 import com.mobile.mapcompose.utils.boldtxt
 import com.mobile.mapcompose.utils.sw20
+import com.mobile.wethercompose.ui.theme.blue
 import kotlinx.coroutines.delay
 
 
@@ -31,20 +33,20 @@ fun Splash(modifier: Modifier = Modifier, onTimeout: () -> Unit = {}) {
         onTimeout()
     }
 
-    Column(modifier = modifier.padding(start = 10.dp,), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.Start) {
+    Column(
+         modifier = modifier.background(blue), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
 
 
 
-          Row {
+          Row(modifier = Modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center){
               Image(
-                  painter = painterResource(R.drawable.menu),
+                  painter = painterResource(R.drawable.sun),
                   contentDescription = "",
-                  modifier = Modifier.size(27.dp)
+                  modifier = Modifier.size(200.dp)
               )
 
               sw20()
 
-              Text("Food XYZ", fontFamily = boldtxt, color = Color(0xFFE03055), fontSize = 23.sp)
           }
 
         

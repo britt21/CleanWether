@@ -23,3 +23,4 @@ val darkMoon = Color(0xFF161618)
 
 val greyTextColor = Color(0xFF9D9EA1)
 val blueIconColor = Color(0xFF0077FF)
+val blue = Color(0xFF08244F)
